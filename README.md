@@ -2,6 +2,23 @@
 
 Portable agent skills for PostgreSQL hackers: mailing-list research, patch review, and backend source explanation.
 
+## Installation
+
+Install all skills in this repository for the complete archive-to-review-memory workflow:
+
+```bash
+npx skills add https://github.com/pghacking/postgres-hacker-skills
+```
+
+The CLI discovers every `SKILL.md` in the repository and configures the selected skills for a supported agent. Use `--skill` only when you want one capability instead of the full collection:
+
+```bash
+npx skills add https://github.com/pghacking/postgres-hacker-skills \
+  --skill search-pg-hackers
+```
+
+The CLI can also target an agent explicitly with its `--agent` option. Preview the repository and skill contents before installation.
+
 ## Available skills
 
 ### `search-pg-hackers`
@@ -10,7 +27,7 @@ Searches the official PostgreSQL mailing-list archive, reconstructs complete thr
 
 Queries may be full titles, incomplete subject prefixes, keywords, authors, or Message-IDs. For example, `[PATCH] Avoid uninitialized-value error in` is sufficient to locate the full thread title.
 
-Install it for a supported agent with the [skills CLI](https://www.skills.sh/docs/cli):
+Install only this skill with the [skills CLI](https://www.skills.sh/docs/cli):
 
 ```bash
 npx skills add https://github.com/pghacking/postgres-hacker-skills --skill search-pg-hackers
@@ -23,10 +40,6 @@ Stores evidence-backed PostgreSQL review findings in a local SQLite database, tr
 ```bash
 npx skills add https://github.com/pghacking/postgres-hacker-skills --skill review-pg-patch
 ```
-
-Install both skills for the complete archive-to-review-memory workflow.
-
-The CLI detects supported agents and can also target one explicitly with its `--agent` option. Preview the repository and skill contents before installation.
 
 Example prompts:
 
