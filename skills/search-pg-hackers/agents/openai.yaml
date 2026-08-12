@@ -1,0 +1,4 @@
+interface:
+  display_name: "Search PostgreSQL Hackers"
+  short_description: "Find and analyze PostgreSQL mailing-list threads"
+  default_prompt: "Use $search-pg-hackers to find and summarize a PostgreSQL hackers mailing-list thread."
