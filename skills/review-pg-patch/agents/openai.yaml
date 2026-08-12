@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review PostgreSQL Patches"
+  short_description: "Review patches with traceable historical memory"
+  default_prompt: "Use $review-pg-patch to review this PostgreSQL patch and recall relevant historical findings."
