@@ -41,10 +41,12 @@ Inspects PostgreSQL patch series, guides source-aware correctness review, scaffo
 npx skills add https://github.com/pghacking/postgres-hacker-skills --skill review-pg-patch
 ```
 
-Example prompts:
+## Usage
+
+After installation, ask naturally. A compatible agent selects the relevant skill from your request; you do not need to name or pin a skill:
 
 ```text
-Use $search-pg-hackers to summarize the thread "Fix small psql slash option leaks".
+Summarize the pgsql-hackers thread "Fix small psql slash option leaks".
 ```
 
 ```text
@@ -52,8 +54,12 @@ Find the pgsql-hackers discussion for this Message-ID and tell me whether its pa
 ```
 
 ```text
-Use $review-pg-patch to review this patch and recall related findings for the touched files and symbols.
+Review this PostgreSQL patch, check related historical discussions, and design appropriate validation tests.
 ```
+
+A full review request may use both skills automatically: `search-pg-hackers` retrieves the discussion and patch sets, then `review-pg-patch` inspects the source, recalls historical findings, and plans validation.
+
+Mention `$search-pg-hackers` or `$review-pg-patch` only when you want to force a particular skill, debug skill selection, or make an automated workflow more explicit. This is optional for normal use.
 
 ## Repository layout
 
