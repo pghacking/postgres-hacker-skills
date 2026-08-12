@@ -35,7 +35,7 @@ npx skills add https://github.com/pghacking/postgres-hacker-skills --skill searc
 
 ### `review-pg-patch`
 
-Stores evidence-backed PostgreSQL review findings in a local SQLite database, tracks their lifecycle across patch sets, and recalls related history by thread, file, symbol, subsystem, topic, or full text.
+Inspects PostgreSQL patch series, guides source-aware correctness review, scaffolds functional SQL/TAP/isolation validation and controlled performance experiments, stores evidence-backed findings in SQLite, and recalls related history.
 
 ```bash
 npx skills add https://github.com/pghacking/postgres-hacker-skills --skill review-pg-patch
